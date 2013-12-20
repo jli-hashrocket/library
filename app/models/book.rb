@@ -2,7 +2,6 @@ require 'csv'
 
 class Book < ActiveRecord::Base
   validates_presence_of :checkout_id
-  validates_presence_of :categorization_id
   validates_presence_of :title
   validates_numericality_of :rating
 
@@ -18,8 +17,7 @@ class Book < ActiveRecord::Base
       Book.find_or_create_by(title: row["title"],
                             author: row["author"],
                             rating: row["rating"].to_i,
-                            checkout_id: row["checkout_id"].to_i,
-                            categorization_id: row["categorization_id"].to_i
+                            checkout_id: row["checkout_id"].to_i
                             )
     end
   end

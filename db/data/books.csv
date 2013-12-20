@@ -1,6 +1,6 @@
-title,author,rating,checkout_id,categorization_id
-Dark Witch,Nora Roberts,80,1,2
-Dear Life,Alice Munro,94,1,4
-The Storyteller,Jodi Picoult,83,2,4
-Fifty Shades of Grey,E. L. James,74,2,3
-Ender's Game,Orson Scott Card,100,1,1
+title,author,rating,checkout_id
+Dark Witch,Nora Roberts,80,1
+Dear Life,Alice Munro,94,1
+The Storyteller,Jodi Picoult,83,2
+Fifty Shades of Grey,E. L. James,74,2
+Ender's Game,Orson Scott Card,100,1

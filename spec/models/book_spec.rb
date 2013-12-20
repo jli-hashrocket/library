@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Book do
   it { should validate_presence_of :checkout_id }
-  it { should validate_presence_of :categorization_id }
   it { should validate_presence_of :title }
   it { should have_valid(:rating).when(100) }
 
@@ -11,6 +10,6 @@ describe Book do
 
   it 'returns a database object once books.csv has been seeded' do
     Book.seed
-    expect(Book.exists?(title: "Dark Witch", author: "Nora Roberts", rating: 80, checkout_id: 1, categorization_id: 2)).to be_true
+    expect(Book.exists?(title: "Dark Witch", author: "Nora Roberts", rating: 80, checkout_id: 1)).to be_true
   end
 end
