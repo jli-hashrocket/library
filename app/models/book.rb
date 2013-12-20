@@ -8,8 +8,8 @@ class Book < ActiveRecord::Base
 
   belongs_to :checkout,
     inverse_of: :books
-  belongs_to :categorization,
-    inverse_of: :books
+  has_many :categorizations,
+    inverse_of: :book
 
   def self.seed
     datafile = Rails.root + 'db/data/books.csv'
@@ -18,7 +18,8 @@ class Book < ActiveRecord::Base
       Book.find_or_create_by(title: row["title"],
                             author: row["author"],
                             rating: row["rating"].to_i,
-                            checkout_id: row["checkout_id"].to_i
+                            checkout_id: row["checkout_id"].to_i,
+                            categorization_id: row["categorization_id"].to_i
                             )
     end
   end

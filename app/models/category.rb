@@ -1,6 +1,9 @@
 class Category < ActiveRecord::Base
   validates_presence_of :name
 
+  has_many :categorizations,
+    inverse_of: :categories
+
   def self.seed
     datafile = Rails.root + 'db/data/categories.csv'
 
